@@ -30,6 +30,10 @@
         <a href="{{ url_for('home') }}">My Top 10 Movies</a>
     </h1>
     <p class="description">These are my all-time favourite movies.</p>
+    <div class="container text-center add">
+        <a href="{{ url_for('add') }}" class="button">Add Movie</a>
+    </div>
+    <hr>
     {% for movie in all_movies %}
     <div class="card">
         <div class="front"
@@ -53,15 +57,12 @@
         </div>
     </div>
     {% endfor %}
-</div>
-
-{% block modal %}{% endblock %}
-
-<div class="container text-center add">
+    <div class="container text-center add">
     <a href="{{ url_for('add') }}" class="button">Add Movie</a>
 </div>
-<footer>
-    <hr>
-</footer>
+</div>
 
+<hr>
+
+{% block modal %}{% endblock %}
 {% endblock %}
