@@ -1,0 +1,6 @@
+Flask
+requests
+flask_bootstrap
+flask_sqlalchemy
+
+gunicorn
