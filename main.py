@@ -115,5 +115,10 @@ def delete():
     return redirect(url_for('home'))
 
 
+@app.route("/modal/<int:movie_id>")
+def modal(movie_id):
+    return render_template('modal.html', all_movies=Movies.query.order_by(Movies.rating.desc()).all(), id=movie_id)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
