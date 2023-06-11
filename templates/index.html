@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script><script>
 		$(document).ready(function(){
-			console.log("hi")
+			console.log("Confirmation Modal")
 			$('#myModal').modal("show")
 		})
 	</script>
@@ -30,7 +30,7 @@
         <a href="{{ url_for('home') }}">My Top 10 Movies</a>
     </h1>
     <p class="description">These are my all-time favourite movies.</p>
-    <div class="container text-center add">
+    <div class="text-center add">
         <a href="{{ url_for('add') }}" class="button">Add Movie</a>
     </div>
     <hr>
@@ -57,11 +57,10 @@
         </div>
     </div>
     {% endfor %}
-    <div class="container text-center add">
-    <a href="{{ url_for('add') }}" class="button">Add Movie</a>
+    <div class="text-center add">
+        <a href="{{ url_for('add') }}" class="button">Add Movie</a>
+    </div>
 </div>
-</div>
-
 <hr>
 
 {% block modal %}{% endblock %}
